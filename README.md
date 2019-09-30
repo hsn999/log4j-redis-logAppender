@@ -21,11 +21,14 @@
 log4j.rootLogger=info,logfile,logstash
 #stdout
 log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+
 log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+
 log4j.appender.stdout.layout.ConversionPattern=%d{yyyy-MM-dd HH\:mm\:ss,SSS} [%t] [%p]-[%C %M %L]-%m%n
 
 
 #logfile
+
 log4j.appender.logfile=org.apache.log4j.RollingFileAppender
 log4j.appender.logfile.File=D:/test/service.log
 log4j.appender.logfile.MaxFileSize=128MB
@@ -36,14 +39,19 @@ log4j.appender.logfile.layout.ConversionPattern=%d{yyyy-MM-dd HH\:mm\:ss,SSS} [%
 ##
 log4j.appender.logstash=com.mylog.log4j.logappender.RedisAppender
 
+
 ##redis的ip和端口用;分割
+
 log4j.appender.logstash.RedisHosts=192.168.1.199:6379
 log4j.appender.logstash.LocationInfo=true
 
 ##服务名
+
 log4j.appender.logstash.AppAlias=testApp
 
+
 ##保存到redis的key，需要与logstash配置一致
+
 log4j.appender.logstash.RedisKey=logstash_mytest
 log4j.appender.logstash.ReconnectionDelay=10000
 log4j.appender.logstash.Threshold=INFO
