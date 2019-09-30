@@ -19,7 +19,9 @@
 ## 配置文件示例
 
 log4j.rootLogger=info,logfile,logstash
+
 #stdout
+
 log4j.appender.stdout=org.apache.log4j.ConsoleAppender
 
 log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
@@ -43,6 +45,7 @@ log4j.appender.logstash=com.mylog.log4j.logappender.RedisAppender
 ##redis的ip和端口用;分割
 
 log4j.appender.logstash.RedisHosts=192.168.1.199:6379
+
 log4j.appender.logstash.LocationInfo=true
 
 ##服务名
