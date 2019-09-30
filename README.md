@@ -7,13 +7,13 @@
 * 以jar包的形式引入到其它工程
 * 修改配置文件
 
-## xml
+```xml
 <dependency>
 	<groupId>com.mylog</groupId>
 	<artifactId>log4j-redis-logAppender</artifactId>
 	<version>1.0.0</version>
 </dependency>
-
+```
 
 ## 配置文件示例
 
